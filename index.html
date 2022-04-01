@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Are you a real OG Minecrafter?, Try this test to see if you are!, (Version v1)"
+    />
+    <meta
+      property="og:url"
+      content="https://trioplane.github.io/Trioplane/TUMQ"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Ultimate Minecraft Quiz" />
+    <meta
+      property="og:description"
+      content="Are you a real OG Minecrafter?, Try this test to see if you are!, (Version v1)"
+    />
+    <meta property="og:image" content="tumq_minified.png" />
+    <meta rel="canonical" href="https://trioplane.github.io/Trioplane/TUMQ" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+    <title>The Ultimate Minecraft Quiz</title>
+  </head>
+  <body>
+    <div class="score-cont">
+      <p>Score:</p>
+      <p id="score">0</p>
+    </div>
+    <div class="alert-container" data-alert-container></div>
+    <div class="container">
+      <img
+        src="tumq_minified.png"
+        alt="The Ultimate Minecraft Quiz Logo"
+        class="logo"
+      />
+      <p id="p">
+        This quiz will test your Minecraft Knowledge to see if you are a true
+        Minecrafter
+      </p>
+      <div id="question-container" class="hide">
+        <div id="question">Q?</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Btn1</button>
+          <button class="btn">Btn2</button>
+          <button class="btn">Btn3</button>
+          <button class="btn">Btn4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Let's go!</button>
+        <div><p id="scoreWas"></p></div>
+        <button id="res-btn" class="res-btn btn hide">
+          End of test, Click this to restart
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

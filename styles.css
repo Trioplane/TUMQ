@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://www.minecraft.net/content/dam/archive/648e3e41ec8a0d5b5772157891a9cace-botwdiamond_header.jpg);
+  background-position: center;
+  background-size: 120%;
+}
+
+body.correct {
+  background-image: url(https://www.minecraft.net/content/dam/archive/512d0d490dc6daa7637c4ab955c5673c-emerald_header.jpg);
+}
+
+body.wrong {
+  background-image: url(https://www.minecraft.net/content/dam/archive/ce38075bb999b67afd7e4f1a5d7a7bd8-header.jpg);
+}
+
+#score {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#scoreWas {
+  margin: 1%;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.score-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 3%;
+  background-color: lightskyblue;
+  opacity: 0.8;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 1%;
+  border-radius: 5px;
+  box-shadow: 0 0 0.2em 0.05em lightgoldenrodyellow,
+    0.5em 0.5em 1px lightskyblue, 1em 1em 2px rgb(112, 171, 207);
+  opacity: 0.8;
+  filter: blur(0.2px);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  transform: scale(1.2) translateY(-10%);
+}
+
+.container > p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-grid {
+  display: grid;
+  gap: 1em;
+  margin: 1em 5em;
+}
+
+.btn {
+  border: 1px solid lightsalmon;
+  outline: 1px solid lightsalmon;
+  outline-offset: 0.1em;
+  background-color: transparent;
+  border-radius: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  outline-offset: 0;
+  background-color: lightsalmon;
+  margin: 1em;
+}
+
+.btn.correct {
+  border: 1px solid lightgreen;
+  outline: 1px solid lightgreen;
+  outline-offset: 0.1em;
+  background-color: transparent;
+  border-radius: 0.5px;
+}
+
+.btn.wrong {
+  border: 1px solid rgb(255, 122, 122);
+  outline: 1px solid rgb(255, 122, 122);
+  outline-offset: 0.1em;
+  background-color: transparent;
+  border-radius: 0.5px;
+}
+
+.btn.correct:hover {
+  outline-offset: 0;
+  background-color: lightgreen;
+  margin: 1em;
+}
+
+.btn.wrong:hover {
+  outline-offset: 0;
+  background-color: rgb(255, 122, 122);
+  margin: 1em;
+}
+
+.start-btn,
+.res-btn {
+  border: none;
+  background-image: linear-gradient(90deg, lightseagreen, rgb(186, 87, 211));
+  background-size: 0% 15%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: all 0.4s ease;
+  outline: none;
+  padding: 1em;
+  border-radius: 3px;
+  box-shadow: 0 0 0 0.01em lightsalmon;
+}
+
+.start-btn:hover,
+.res-btn:hover {
+  background-size: 100% 15%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.alert-container {
+  position: fixed;
+  top: 10vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert {
+  pointer-events: none;
+  background-color: hsl(204, 7%, 85%);
+  padding: 0.75em;
+  border-radius: 0.25em;
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+  margin-bottom: 0.5em;
+  animation: hover 0.2s ease infinite alternate;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert.hide {
+  opacity: 0;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(1vw);
+  }
+  100% {
+    transform: translateY(-1vw);
+  }
+}
